@@ -78,5 +78,5 @@ Then, add the command you want to run ( just before #Print the IP address), for 
 Then save and reboot to see the changes
 
 ## Credits:
-This short manual was inspired on the following link.
-https://scribles.net/customizing-boot-up-screen-on-raspberry-pi/
+- This short manual was inspired on the following link. https://scribles.net/customizing-boot-up-screen-on-raspberry-pi/
+- Create a img file and shrink it, step by step, here: https://ep.gnt.md/index.php/how-to-clone-raspberry-pi-sd-card-on-linux-and-shrink-it-to-actual-size/
