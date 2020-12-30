@@ -62,10 +62,11 @@ Now you should see your custom logo in the next boot
 You may edit the _.bashrc_ file for this task
 ```nano .bashrc```
 At the end of this file append the commands followed by the actions, for instance.
-
+```
 alias ok='echo it works!'
 alias off='vcgencmd display_power 0'
 alias on='vcgencmd display_power 1'
+```
 
 This configuration will work after boot.
 
