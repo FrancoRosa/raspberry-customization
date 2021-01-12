@@ -84,7 +84,7 @@ Then save and reboot to see the changes
 
 ## Bonus
 - Copy img file from sd to file (https://mtyka.github.io/raspberrypi/2019/07/25/shrink-raspberrypi-image.html)
-´´´
+```
 sudo dd bs=4M if=/dev/sdb of=myimage.img conv=fsync status=progress
-´´´
+```
 - Shrink img file https://ostechnix.com/pishrink-make-raspberry-pi-images-smaller/
