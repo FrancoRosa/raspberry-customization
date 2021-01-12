@@ -81,3 +81,10 @@ Then save and reboot to see the changes
 ## Credits:
 - This short manual was inspired on the following link. https://scribles.net/customizing-boot-up-screen-on-raspberry-pi/
 - Create a img file and shrink it, step by step, here: https://ep.gnt.md/index.php/how-to-clone-raspberry-pi-sd-card-on-linux-and-shrink-it-to-actual-size/
+
+## Bonus
+- Copy img file from sd to file (https://mtyka.github.io/raspberrypi/2019/07/25/shrink-raspberrypi-image.html)
+´´´
+sudo dd bs=4M if=/dev/sdb of=myimage.img conv=fsync status=progress
+´´´
+- Shrink img file https://ostechnix.com/pishrink-make-raspberry-pi-images-smaller/
