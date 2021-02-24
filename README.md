@@ -38,29 +38,41 @@ Open a terminal on RPi or log with ssh for this tasks
 
 ### Remove rainbow screen
 Open “/boot/config.txt” as root.
-```sudo nano /boot/config.txt```
+```
+sudo nano /boot/config.txt
+```
 Then add below line at the end of the file.
-```disable_splash=1```
+```
+disable_splash=1
+```
 
 ### Remove text message under splash image:
 Open “/usr/share/plymouth/themes/pix/pix.script” as root.
-```sudo nano /usr/share/plymouth/themes/pix/pix.script```
-Then, comment t:
+```bash
+sudo nano /usr/share/plymouth/themes/pix/pix.script
+```
+Then, comment the following lines:
 
+```bash
 message_sprite = Sprite();
 message_sprite.SetPosition(screen_width * 0.1, screen_height * 0.9, 10000);
        my_image = Image.Text(text, 1, 1, 1);
        message_sprite.SetImage(my_image);
+```
 
 ### Replace Splash Image
 For this procedure you need the custom logo somewhere on your RPi, on your terminal type ```sftp pi@raspberrypi.local``` to use the FTP client then ```put logo.png```, finally
 
-```sudo cp ~/logo.png /usr/share/plymouth/themes/pix/splash.png```
+```
+sudo cp ~/logo.png /usr/share/plymouth/themes/pix/splash.png
+```
 Now you should see your custom logo in the next boot
 
 ## Customize linux commands
 You may edit the _.bashrc_ file for this task
-```nano .bashrc```
+```
+nano .bashrc
+```
 At the end of this file append the commands followed by the actions, for instance.
 ```
 alias ok='echo it works!'
@@ -73,9 +85,13 @@ This configuration will work after boot.
 ## Run commands just after boot
 
 Edit the following file
-```sudo nano /etc/rc.local```
+```
+sudo nano /etc/rc.local
+```
 Then, add the command you want to run ( just before #Print the IP address), for instance
-```vcgencmd display_power 0```
+```
+vcgencmd display_power 0
+```
 Then save and reboot to see the changes
 
 ## Credits:
